@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <org.opencv.android.JavaCameraView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/opencv_tutorial_activity_surface_view"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X:0, Y:0"
+        android:textColor="#D0171F"
+        android:id="@+id/touch_coordinates"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/touch_coordinates"
+        android:text="Color: "
+        android:textColor="#B0171F"
+        android:id="@+id/touch_color"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/touch_color"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp">
+
+        <RadioButton
+            android:id="@+id/edgeDetection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/touch_color"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="18dp"
+            android:checked="false"
+            android:textColor="#FFFFFF"
+            android:text="Edge Detector" />
+
+
+        <RadioButton
+            android:id="@+id/lightSourceDetector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:checked="false"
+            android:text="Light Source Detection"
+            android:layout_alignBottom="@+id/radioGroup"
+            android:textColor="#FFFFFF"
+            android:layout_toEndOf="@+id/radioGroup" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/OtherCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp"
+        android:text="Other Camera" />
+
+</RelativeLayout>
